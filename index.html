@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hostel</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/logo.png" alt="Хостел">
+        </div>
+        <nav>
+            <ul class="headerMenu">
+                <li><a href="" class="headerMenu__link">Переваги</a></li>
+                <li><a href="" class="headerMenu__link">Номери</a></li>
+                <li><a href="" class="headerMenu__link">Послуги</a></li>
+                <li><a href="" class="headerMenu__link">Відгуки</a></li>
+            </ul>
+        </nav>
+        <div class="header__contacts headerContacts">
+            <div class="headerContacts__item">
+                <a href="tel:+380633934773">+38 (063) 393-47-73</a>
+            </div>
+            <div class="headerContacts__item">
+                <a href="tel:+380979341849">+38 (063) 393-47-73</a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="mainContent">
+        <section class="mainContent__banner banner">
+            <div class="banner__left">
+                <h1 class="banner__title">Зручний хостел в самому центрі Львова</h1>
+                <div class="banner__describe">Вартість від 200 грн за добу</div>
+            </div>
+            <form action="https://formspree.io/mashavalko.work@gmail.com" method="post" class="banner__form form">
+                <div class="form__set">
+                    <input type="text" name="userName" placeholder="Ваше ім'я"/>
+                </div>
+                <div class="form__set">
+                    <input type="tel" name="userTel" placeholder="Ваш телефон"/>
+                </div>
+                <div class="form__set">
+                    <input type="date" name="userArrival" min="2019-06-27" max="2019-12-31"/>
+                </div>
+                <div class="form__set">
+                    <input type="date" name="userDeparture" min="2019-06-27" max="2019-12-31"/>
+                </div>
+                <div class="form__set">
+                    <input type="submit" value="Відправити замовлення"/>
+                </div>
+            </form>
+        </section>
+        
+        <section class="mainContent__advantages advantages">
+            <h2 class="mainContent__title">Наші переваги</h2>
+            <div class="advantages__row">
+                <div class="advantages__col">
+                    <div class="advantages__icon"></div>
+                    <div class="advantages__text">40 спальних місць</div>
+                </div>
+                <div class="advantages__col">
+                    <div class="advantages__icon"></div>
+                    <div class="advantages__text">100 позитивних відгуків</div>
+                </div>
+                <div class="advantages__col">
+                    <div class="advantages__icon"></div>
+                    <div class="advantages__text">4 кімнати</div>
+                </div>
+                <div class="advantages__col">
+                    <div class="advantages__icon"></div>
+                    <div class="advantages__text">Безкоштовні кава та чай</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hotelCatalog">
+            <h2 class="mainContent__title">Номери та ціни</h2>
+            <div class="hotelCatalog__item">
+                <div class="hotelCatalog__img">
+                    <img src="img/ekonom-room.jpg" alt="Тримісний Економ">
+                </div>
+                <div class="hotelCatalog__price">150 грн за добу</div>
+                <div class="hotelCatalog__title">3-місцевий номер економ</div>
+                <div class="hotelCatalog__descr">
+                    Затишний номер категорії "Тримісний Економ" передбачає тримісне проживання, санвузол розташований за межами номера.
+                </div>
+                <a href="javascript:void(0)" class="btn">Забронювати</a>
+            </div>
+            <div class="hotelCatalog__item">
+                <div class="hotelCatalog__img">
+                    <img src="img/ekonom-room.jpg" alt="Чотирьохмісний економ">
+                </div>
+                <div class="hotelCatalog__price">210 грн за добу</div>
+                <div class="hotelCatalog__title">4-місцевий номер економ</div>
+                <div class="hotelCatalog__descr">
+                    Затишний номер категорії "Чотирьохмісний Економ" передбачає чотирьохмісне проживання, санвузол розташований за межами номера.
+                </div>
+                <a href="javascript:void(0)" class="btn">Забронювати</a>
+            </div>
+            <div class="hotelCatalog__item">
+                <div class="hotelCatalog__img">
+                    <img src="img/lux-room.jpg" alt="Двомісний люкс">
+                </div>
+                <div class="hotelCatalog__price">480 грн за добу</div>
+                <div class="hotelCatalog__title">2-місний номер люкс</div>
+                <div class="hotelCatalog__descr">
+                    Затишний номер категорії "Двомісний Люкс" передбачає двомісне проживання, санвузол розташований в середині номеру номера.
+                </div>
+                <a href="javascript:void(0)" class="btn">Забронювати</a>
+            </div>
+            <div class="hotelCatalog__item">
+                <div class="hotelCatalog__img">
+                    <img src="img/lux-room.jpg" alt="Тримісний люкс">
+                </div>
+                <div class="hotelCatalog__price">600 грн за добу</div>
+                <div class="hotelCatalog__title">3-місний номер люкс</div>
+                <div class="hotelCatalog__descr">
+                    Затишний номер категорії "Тримісний Люкс" передбачає тримісне проживання, санвузол розташований в середині номеру.
+                </div>
+                <a href="javascript:void(0)" class="btn">Забронювати</a>
+            </div>
+        </section>
+        <section class="nearPlace">
+            <h2 class="mainContent__title">Поряд знаходяться</h2>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/lviv-opera.jpg" alt="Львівська національна опера">
+                </div>
+                <div class="nearPlace__title">Львівська Національна Опера</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/ifranko-university.jpg" alt="Університет імені Івана Франка">
+                </div>
+                <div class="nearPlace__title">Львівський національний університет імені Івана Франка</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/rynek-square.jpg" alt="Площа ринок">
+                </div>
+                <div class="nearPlace__title">Площа ринок</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/lviv-opera.jpg" alt="Оперний театр">
+                </div>
+                <div class="nearPlace__title">Оперний театр</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/franko-park.jpg" alt="Парк ім. Івана Франка">
+                </div>
+                <div class="nearPlace__title">Парк ім. Івана Франка</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/palace-potocki.jpg" alt="Палац Потоцьких">
+                </div>
+                <div class="nearPlace__title">Палац Потоцьких</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/bank.jpg" alt="Банки">
+                </div>
+                <div class="nearPlace__title">Банки</div>
+            </div>
+            <div class="nearPlace__item">
+                <div class="nearPlace__img">
+                    <img src="img/restoran.jpg" alt="Ресторани">
+                </div>
+                <div class="nearPlace__title">Ресторани</div>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2 class="mainContent__title">Галерея</h2>
+            <div class="gallery__img">
+                <img src="img/bedrooms.jpg" alt="Кімната з ліжками">
+            </div>
+            <div class="gallery__img">
+                <img src="img/kitchen.jpg" alt="Кухня">
+            </div>
+            <div class="gallery__img">
+                <img src="img/window-room.jpg" alt="Кімната з вікном">
+            </div>
+            <div class="gallery__img">
+                <img src="img/small-room.jpg" alt="Маленька кімната">
+            </div>
+            <div class="gallery__img">
+                <img src="img/bedrooms.jpg" alt="Кімната з ліжками">
+            </div>
+            <div class="gallery__img">
+                <img src="img/kitchen.jpg" alt="Кухня">
+            </div>
+            <div class="gallery__img">
+                <img src="img/window-room.jpg" alt="Кімната з вікном">
+            </div>
+            <div class="gallery__img">
+                <img src="img/small-room.jpg" alt="Маленька кімната">
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
