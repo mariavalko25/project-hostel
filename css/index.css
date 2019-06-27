@@ -1,0 +1,320 @@
+:root {
+    --main-color: black;
+    --accent-color: #7ca934;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, h4, h5, h6, header, main, footer, nav, p,
+button{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+input{
+    background: none; 
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+.img-responsive{
+    width: 100%;
+    display: block;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.headerTop {
+    padding: 24px 0 21px;
+    background-color: #f8f8f8;
+}
+
+.headerTop .headerTop__outer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerTop .headerMenu {
+    display: none;
+}
+
+.headerTop .headerTop__contacts{
+    display: none;
+}
+
+
+
+.mobileMenu .mobileMenu__icon {
+    width: 49px;
+    height: 32px;
+    display: flex;
+}
+@media (min-width: 970px) {
+    .container{
+        max-width: 790px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .mobileMenu {
+        display: none;
+    }
+    
+    .headerTop{
+        padding: 18px 0;
+    }
+    
+    .headerTop .headerMenu {
+        display: flex;
+        align-items: center;
+    }
+    
+    .headerTop .headerMenu .headerMenu__item {
+        padding: 0 17px;
+    }
+    
+    .headerTop .headerMenu .headerMenu__link{
+        text-decoration: none;
+        color: var(--main-color);
+        transition: all .3s;
+        font-size: 17px;
+    } 
+    
+    .headerTop .headerMenu .headerMenu__link:hover{
+        color: var(--accent-color);
+    }
+
+    .headerTop .headerTop__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .headerTop .headerContacts .headerContacts__item a {
+        color: var(--main-color);
+        font-family: 'Arial Bold', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+    } 
+}
+
+@media (min-width: 1100px){
+    .container{
+        max-width: 850px;
+    }
+    
+    .headerTop .headerMenu .headerMenu__item {
+        padding: 0 22px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1150px;
+    }
+    
+    .headerTop .headerMenu .headerMenu__item {
+        padding: 0 29px;
+    }
+}
+
+.mainContent .mainContent__banner{
+    position: relative;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainContent .mainContent__banner:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: 0.5;
+}
+
+.mainContent .banner .banner__outer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 43px;
+}
+
+.mainContent .banner .banner__left,
+.mainContent .banner .banner__form{
+    z-index: 1;
+}
+
+.mainContent .banner .banner__title{
+    max-width: 296px;
+    width: 100%;
+    font-family: 'Arial Bold', sans-serif;
+    font-weight: bold;
+    font-size: 23.25px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.mainContent .banner .banner__describe{
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 35px;
+}
+
+.mainContent .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 20px 30px;
+}
+
+.mainContent .form .form__title{
+    font-family: 'Arial Bold', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.mainContent .form .form__set{
+    margin: 5px 0;
+}
+
+.mainContent .form .form__control{
+    display: block;
+    border: none;
+    border-radius: 10px;
+    height: 34px;
+    width: 244px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: #757575;
+    font-size: 15px;
+}
+
+@media (min-width: 500px) {
+    .mainContent .banner .banner__outer {
+        padding: 60px 0 63px;
+    }
+    .mainContent .banner .banner__describe {
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 46px;
+    }
+
+    .mainContent .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 31px 20px 52px;
+    }
+
+    .mainContent .form .form__title {
+        font-family: 'Arial Bold', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 33px;
+    }
+
+    .mainContent .form .form__set {
+        margin: 9px 0;
+    }
+
+    .mainContent .form .form__control {
+        display: block;
+        border: none;
+        border-radius: 10px;
+        height: 34px;
+        width: 244px;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 970px) {
+    .mainContent .banner .banner__outer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 105px 17px 78px 0;
+    }
+
+    .mainContent .banner .banner__left,
+    .mainContent .banner .banner__form {
+        z-index: 1;
+    }
+
+    .mainContent .banner .banner__title {
+        max-width: 446px;
+        width: 100%;
+        font-family: 'Arial Bold', sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        color: var(--accent-color);
+        margin-bottom: 43px;
+    }
+
+    .mainContent .banner .banner__describe {
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 55px;
+    }
+
+    .mainContent .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: var(--main-color);
+        opacity: 0.569;
+        padding: 31px 88px 52px;
+    }
+
+    .mainContent .form .form__title {
+        font-family: 'Arial Bold', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 33px;
+    }
+}
+
+
+
