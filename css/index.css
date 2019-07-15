@@ -1034,7 +1034,7 @@ input{
 
 
 .headerTop-fixed{ 
-    z-index: 9999; 
+    z-index: 1022; 
     position: fixed; 
     left: 0; 
     top: 0; 
