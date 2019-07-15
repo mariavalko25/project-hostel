@@ -47,9 +47,12 @@
     --accent-color: #7ca934;
     --accent-color-primary: #689225;
     --bg-color: #f8f8f8;
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Arial', sans-serif;
     font-size: 14px;
-    scroll-behavior: smooth;
 }
 
 body, h1, h2, h3, h4, h5, h6, header, main, footer, nav, p,
@@ -287,7 +290,7 @@ input{
     margin-bottom: 35px;
 }
 
-.mainContent .form {
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,7 +301,7 @@ input{
     box-sizing: border-box;
 }
 
-.mainContent .form .form__title{
+.form .form__title{
     font-family: 'Arial Bold', sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -306,11 +309,11 @@ input{
     margin-bottom: 20px;
 }
 
-.mainContent .form .form__set{
+.form .form__set{
     margin: 5px 0;
 }
 
-.mainContent .form .form__control{
+.form .form__control{
     display: block;
     border: none;
     border-radius: 10px;
@@ -323,7 +326,11 @@ input{
     font-size: 15px;
 }
 
-.mainContent .form .form__btn {
+.form textarea.form__control {
+    height: 60px;
+}
+
+.form .form__btn {
     box-sizing: border-box;
     width: 244px;
     height: 36px;
@@ -334,12 +341,16 @@ input{
     cursor: pointer;
 }
 
+.form-control-error {
+    border: 2px solid red;
+}
+
 @media (min-width: 450px){
-    .mainContent .form .form__control{
+    .form .form__control{
         width: 320px;
     }
     
-    .mainContent .form .form__btn{
+    .form .form__btn{
         width: 320px;
     }
 }
@@ -358,23 +369,27 @@ input{
         margin-bottom: 46px;
     }
 
-    .mainContent .form {
+    .form {
         padding: 31px 20px 52px;
         max-width: 528px;
         width: 100%;
     }
 
-    .mainContent .form .form__title {
+    .form .form__title {
         margin-bottom: 33px;
     }
 
-    .mainContent .form .form__set {
+    .form .form__set {
         margin: 9px 0;
     }
 
-    .mainContent .form .form__control,
-    .mainContent .form .form__btn{
+    .form .form__control,
+    .form .form__btn{
         width: 349px;
+    }
+
+    .form textarea.form__control {
+        height: 80px;
     }
 }
 
@@ -402,26 +417,30 @@ input{
         font-size: 22px;
     }
 
-    .mainContent .form {
+    .form {
         padding: 31px 50px 52px;
         max-width: 390px;
     }
 
-    .mainContent .form .form__control,
-    .mainContent .form .form__btn{
+    .form .form__control,
+    .form .form__btn{
         width: 300px;
+    }
+
+    .form textarea.form__control {
+        height: 130px;
     }
     
 }
 
 @media (min-width: 1300px) {
-    .mainContent .form {
+    .form {
         padding: 31px 88px 52px;
         max-width: 564px;
     }
 
-    .mainContent .form .form__control,
-    .mainContent .form .form__btn{
+    .form .form__control,
+    .form .form__btn{
         width: 370px;
     }
     
@@ -776,9 +795,20 @@ input{
         justify-content: center;
     }
 
-    .feedback .feedback__item {
+    .feedback__form {
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .feedback__outer {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback__item {
+        display: flex;
+        justify-content: flex-start;
         margin-top: 51px;
         padding: 22px 65px 67px 25px;
         border-radius: 10px;
@@ -786,13 +816,19 @@ input{
         box-shadow: 0px 3px 10.66px 2.34px rgba(0, 116, 228, 0.26);
         max-width: 971px;
         box-sizing: border-box;
+        width: 650px;
+        margin: auto;
+    }
+
+    .feedback-swiper {
+        margin-top: 50px;
     }
     
-    .feedback .feedback__descr {
+    .feedback__descr {
         margin-left: 29px;
     }
     
-    .feedback .feedback__name {
+    .feedback__name {
         font-family: 'Arial Bold', sans-serif;
         font-weight: bold;
         font-size: 17px;
@@ -920,7 +956,127 @@ input{
     }
 }
 
+.modal-body {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
 
+.modal-dialog .form .form__control, 
+.modal-dialog .form .form__btn {
+    width: 200px;
+}
+
+.modal-dialog  .hotelCatalog__title {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.modal-dialog  .hotelCatalog__price {
+    font-family: 'Arial Bold', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.modal-dialog .modal-price {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 450px) {
+    .modal-dialog .form .form__control, 
+    .modal-dialog .form .form__btn {
+        width: 280px;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 550px;
+    }
+
+    .modal-dialog .form {
+        max-width: 360px;
+        margin: auto;
+        padding: 31px 15px 52px;
+    }
+}
+
+@media (min-width: 971px) {
+    .modal-dialog  .hotelCatalog__title {
+        font-size: 20px;
+    }
+}
+
+.go-up, .go-down {
+    display: none;
+    position: fixed; 
+    z-index: 9999; 
+    right: 2%;
+    cursor: pointer;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+   }
+.go-up { 
+    bottom: 180px;
+    background: url(../img/right-arrow.svg);
+    transform: rotate(-90deg); 
+}
+.go-down { 
+    bottom: 130px; 
+    background: url(../img/right-arrow.svg);
+    transform: rotate(90deg);
+}
+
+
+.headerTop-fixed{ 
+    z-index: 9999; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%;
+} 
+
+.headerTop.headerTop-fixed {
+    box-shadow: 0px 3px 10.66px 2.34px rgba(0, 116, 228, 0.26);
+}
+
+.navbar {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    margin-right: 15px;
+}
+
+@media (min-width: 470px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+.mainContent__gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.galery-mob {
+    display: none;
+}
+
+@media (min-width: 971px){
+    .carousel {
+        display: none;
+    }
+
+    .galery-mob {
+        display: block;
+    }
+}
 
 
 
